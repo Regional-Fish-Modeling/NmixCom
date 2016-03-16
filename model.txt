@@ -15,7 +15,7 @@ model {
     
     for (j in 1:T) {
     y[i,j] ~ dpois(mu[i,j])
-    log(mu[i,j]) <- a[i] + r[i]*t[j] + b[i]Q[j]
+    log(mu[i,j]) <- a[i] + r[i]*t[j] + b[i]*Q[j]
     }
     }
     }
